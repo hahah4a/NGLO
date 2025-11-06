@@ -5,19 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Newsletter Universitaria</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
+
 <body>
   <div class="container">
-    <h1>Bienvenido a asesorías uaa</h1>
-    <p>Recibe asesorías personalizadas y recordatorios sobre tus materias.</p>
+    <h1>Newsletter Universitaria 🎓</h1>
+    <p>Recibe asesorías escolares, tips y novedades directamente en tu correo.</p>
 
-    <form id="newsletter-form">
-      <input type="text" id="nombre" placeholder="Tu nombre" required />
-      <input type="email" id="correo" placeholder="Tu correo" required />
+    <form id="form" onsubmit="sendEmail(event)">
+      <input type="text" id="name" placeholder="Tu nombre" required />
+      <input type="email" id="email" placeholder="Tu correo electrónico" required />
       <button type="submit">Suscribirme</button>
     </form>
 
-    <div id="mensaje" class="hidden"></div>
+    <p class="footer">¿Quieres darte de baja? <a href="#" id="unsubscribe">Haz clic aquí</a></p>
   </div>
 
   <script src="script.js"></script>
