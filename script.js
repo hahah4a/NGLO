@@ -11,7 +11,7 @@ function sendEmail(event) {
     user_email: document.getElementById("email").value,
   };
 
-  emailjs.send("service_qvu8jl4", "template_hm3e8sd", params) // Template Id y Service Id
+  emailjs.send("service_u0ljikz", "template_hm3e8sd", params) // Template Id y Service Id
     .then(function(response) {
       alert("✅ ¡Gracias por registrarte! Revisa tu correo electrónico.");
       document.getElementById("form").reset();
