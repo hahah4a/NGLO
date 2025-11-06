@@ -1,12 +1,28 @@
-document.getElementById('newsletter-form').addEventListener('submit', function(e) {
-  e.preventDefault();
+// Inicializar EmailJS con tu Public Key
+(function() {
+  emailjs.init("TU_PUBLIC_KEY"); // 👈 REEMPLAZA ESTO
+})();
 
-  const nombre = document.getElementById('nombre').value;
-  const correo = document.getElementById('correo').value;
-  const mensaje = document.getElementById('mensaje');
+function sendEmail(event) {
+  event.preventDefault();
 
-  // Simula el envío de correo (puedes conectar con un backend real después)
-  mensaje.textContent = `¡Gracias, ${nombre}! Te has suscrito correctamente. Revisa tu correo (${correo}) para más detalles.`;
-  mensaje.classList.remove('hidden');
-  this.reset();
+  const params = {
+    user_name: document.getElementById("name").value,
+    user_email: document.getElementById("email").value,
+  };
+
+  emailjs.send("TU_SERVICE_ID", "TU_TEMPLATE_ID", params) // 👈 REEMPLAZA ESTO TAMBIÉN
+    .then(function(response) {
+      alert("✅ ¡Gracias por registrarte! Revisa tu correo electrónico.");
+      document.getElementById("form").reset();
+    }, function(error) {
+      alert("❌ Ocurrió un error al enviar el correo. Inténtalo nuevamente.");
+      console.error(error);
+    });
+}
+
+// Simula la opción de "darse de baja"
+document.getElementById("unsubscribe").addEventListener("click", function(event) {
+  event.preventDefault();
+  alert("Te has dado de baja de la newsletter.");
 });
