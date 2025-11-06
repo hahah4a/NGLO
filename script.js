@@ -1,6 +1,6 @@
 // Inicializar EmailJS con tu Public Key
 (function() {
-  emailjs.init("TU_PUBLIC_KEY"); // 👈 REEMPLAZA ESTO
+  emailjs.init("c2UGVmDUBJY4hl7Rv"); // Public key de EmailJS
 })();
 
 function sendEmail(event) {
@@ -11,7 +11,7 @@ function sendEmail(event) {
     user_email: document.getElementById("email").value,
   };
 
-  emailjs.send("TU_SERVICE_ID", "TU_TEMPLATE_ID", params) // 👈 REEMPLAZA ESTO TAMBIÉN
+  emailjs.send("service_qvu8jl4", "template_q2q1wae", params) // Template Id y Service Id
     .then(function(response) {
       alert("✅ ¡Gracias por registrarte! Revisa tu correo electrónico.");
       document.getElementById("form").reset();
