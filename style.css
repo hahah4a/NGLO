@@ -1,56 +1,67 @@
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f9f9f9;
-  color: #1a1a1a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f6f9ff;
+  color: #002a5c;
+  text-align: center;
+  padding: 50px;
 }
 
 .container {
-  text-align: center;
   background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
-  padding: 40px;
-  width: 90%;
+  border-radius: 12px;
+  padding: 30px;
   max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px rgba(0, 42, 92, 0.1);
 }
 
 h1 {
-  color: #004aad; /* Azul principal */
+  color: #003366;
+  margin-bottom: 10px;
 }
 
-button {
-  background-color: #004aad;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
+p {
+  font-size: 15px;
+  color: #333;
 }
 
-button:hover {
-  background-color: #c1121f; /* Toque rojo */
+form {
+  margin-top: 20px;
 }
 
 input {
-  width: 80%;
+  display: block;
+  width: 90%;
+  margin: 10px auto;
   padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
+  font-size: 15px;
   border-radius: 8px;
+  border: 1px solid #003366;
 }
 
-.hidden {
-  display: none;
+button {
+  width: 95%;
+  padding: 10px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
 }
 
-#mensaje {
-  margin-top: 20px;
+button:hover {
+  background-color: #e60023; /* toque rojo */
+}
+
+.footer {
+  font-size: 13px;
+  margin-top: 15px;
+}
+
+.footer a {
+  color: #e60023;
+  text-decoration: none;
   font-weight: bold;
-  color: #004aad;
 }
